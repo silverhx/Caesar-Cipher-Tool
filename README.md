@@ -1,2 +1,2 @@
-# Caesar-Cipher-Tool
-A simple encryption &amp; decryption tool using Caesar Cipher algorithm.
+Caesar-Cipher-Tool
+A simple encryption and decryption tool using Caesar Cipher algorithm.
