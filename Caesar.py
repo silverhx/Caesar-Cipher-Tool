@@ -13,24 +13,35 @@ def caesar_cipher(text, shift, mode='encrypt'):
 
 
 def main():
-    print("Caesar Cipher Tool Made By - Deepak")
+    # ANSI Colors
+    RED = "\033[91m"
+    GREEN = "\033[92m"
+    YELLOW = "\033[93m"
+    BLUE = "\033[94m"
+    CYAN = "\033[96m"
+    RESET = "\033[0m"
+
+    print(BLUE + "===============================" + RESET)
+    print(CYAN + "  Caesar Cipher Tool Made By - Deepak" + RESET)
+    print(BLUE + "===============================" + RESET)
     print()
-    print("1. Encrypt")
-    print("2. Decrypt")
+
+    print(YELLOW + "1. Encrypt" + RESET)
+    print(YELLOW + "2. Decrypt" + RESET)
     
-    choice = input("Choose an option (1/2): ").strip()
+    choice = input(GREEN + "Choose an option (1/2): " + RESET).strip()
 
     if choice not in ['1', '2']:
-        print("Invalid choice!")
+        print(RED + "Invalid choice!" + RESET)
         return 
 
-    message = input("Enter your message: ")
-    shift = int(input("Enter shift value (e.g., 3): "))
+    message = input(GREEN + "Enter your message: " + RESET)
+    shift = int(input(GREEN + "Enter shift value (e.g., 3): " + RESET))
 
     if choice == '1':
-        print("\nEncrypted Message:", caesar_cipher(message, shift, 'encrypt'))
+        print(BLUE + "\nEncrypted Message:" + RESET, GREEN + caesar_cipher(message, shift, 'encrypt') + RESET)
     elif choice == '2':
-        print("\nDecrypted Message:", caesar_cipher(message, shift, 'decrypt'))
+        print(BLUE + "\nDecrypted Message:" + RESET, GREEN + caesar_cipher(message, shift, 'decrypt') + RESET)
 
 
 if __name__ == "__main__":
